@@ -21,9 +21,9 @@ export class FirehoseSubscription extends FirehoseSubscriptionBase {
     const postsToCreate = ops.posts.creates
       .filter((create) => {
         // only alf-related posts
-        const keywords = ['ElConquisETB', 'ConquisETB', 'Conquis', 'Conquistador del Fin del Mundo', 'Conquistador del Caribe', 'El Conquis']; // Lista de valores a buscar
-        // return create.record.text.toLowerCase().includes('alf')
-        return create.record.text.toLowerCase().includes(keywords);
+        //const keywords = ['ElConquisETB', 'ConquisETB', 'Conquis', 'Conquistador del Fin del Mundo', 'Conquistador del Caribe', 'El Conquis']; // Lista de valores a buscar
+        return create.record.text.toLowerCase().includes('ElConquis')
+        //return create.record.text.toLowerCase().includes(keywords);
       })
       .map((create) => {
         // map alf-related posts to a db row
